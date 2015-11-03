@@ -126,6 +126,11 @@ Slim::Engine.options[:pretty] = true
 # Middleman places all pages in a folder with its name and
 # index.html inside it. Netlify is looking for pages like 404.html
 # at the root of site folder
+before_build do
+  puts 'Falling asleep'
+  sleep 5.minutes
+  puts 'Waking up...'
+end
 after_build do
   # Netlify
   #
